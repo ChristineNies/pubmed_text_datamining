@@ -7,7 +7,7 @@
 - The relationship between the biomedical concepts can be found, such as the gene-gene relationship or gene-disease relationship. 
 - Hypothesis generation can occur with support and validation through experimental data. 
 - Identifying genes hypotheses with the gene expression data can discover the new relationships between genes. 
-  > For example, Gene Entrez ID 11260 points to Gene Entrez ID 5901 in the directed graph, which can be derived from XPOT (gene Entrez ID: 11260) inhibiting RAN (gene Entrez ID: 5901) in the RNA transport (KEGG pathway ID: hsa03013) (Nies et al., 2021).
+  > For example, Gene Entrez ID 11260 points to Gene Entrez ID 5901 in the directed graph, which can be derived from *XPOT* (gene Entrez ID: 11260) inhibiting *RAN* (gene Entrez ID: 5901) in the *RNA transport* (KEGG pathway ID: hsa03013) (Nies et al., 2021).
 
 ### References
 1. Albahri, A. S., Hamid, R. A., Alwan, J. K., Al-Qays, Z. T., Zaidan, A. A., Zaidan, B. B., Albahri, A.O.S., AlAmoodi, A.H., Khlaf, J.M., Almahdi, E.M., Thabet, E., Hadi, S.M., Mohammed, K.I., Alsalem, M.A., Al-Obaidi, J.R., and Madhloom, H. T. (2020). Role of biological data mining and machine learning techniques in detecting and diagnosing the novel coronavirus (COVID-19): a systematic review. Journal of medical systems, 44, 1-11.
