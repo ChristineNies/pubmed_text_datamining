@@ -1,7 +1,7 @@
 # PubMed text data mining
 # validate pathways
 
-path0=read.csv("GSE1456_path-ANOVA-DRW-LR-10FCV_1_PS_seed100.csv")
+path0=read.csv("path_identified.csv")
 path0=path0[,2]
 path=as.matrix(path0)
 
@@ -59,17 +59,9 @@ for ( i in 1 : nrow(path)){
         pmid2=0
     }
 
-    # papers based on PMIDs
-    # dami_papers <- fetch_pubmed_data(dami_on_pubmed)
-    # titles <- unlist(xpathApply(dami_papers, "//ArticleTitle", saveXML))
-    # title_pos <- regexpr("<ArticleTitle>.*<\\/ArticleTitle>", titles)
-    # titles <- substr(titles, title_pos + 14, title_pos + attributes(title_pos)$match.length - 16)
-    # dami_abstracts_xml <- fetch_pubmed_data(dami_on_pubmed)
-    # dami_abstracts_list <- articles_to_list(dami_abstracts_xml)
-
     vdp[i,1] <- pname
     vdp[i,2] <- pmid
     vdp[i,3] <- pmid2
 }
 
-write.csv(vdp,"valid_path_GSE1456.csv")
+write.csv(vdp,"valid_path.csv")
