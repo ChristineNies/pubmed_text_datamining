@@ -1,8 +1,7 @@
 # PubMed text data mining
 # validate genes
 
-# genes=c(4853,4855,4862,4881,4882)
-genes0=read.csv("GSE1456_gene-ANOVA-DRW-LR-10FCV_1_PS_seed100.csv")
+genes0=read.csv("genes_identified.csv")
 genes0=genes0[,2]
 genes=as.matrix(genes0)
 
@@ -19,13 +18,6 @@ vdg <- matrix(NA, nrow = length(g_matrix), ncol = 3);
 # vdg <- matrix(NA, nrow = length(g_matrix), ncol = 1);
 rownames(vdg) <- rownames(g_matrix);
 colnames(vdg) <- c("names","all cancers PMIDs","cancer PMIDs")
-# colnames(vdg) <- c("names")
-
-# lost connection "NA" exists
-# vdg=valid_gene_1
-# genes=genes[]
-# vdg <- matrix(NA, nrow = length(genes), ncol = 1);
-# rownames(vdg) <- genes;
 # colnames(vdg) <- c("names")
 
 # install.packages("easyPubMed")
@@ -77,20 +69,12 @@ for ( i in 1 : nrow(g_matrix)){
     if(num_pmid2==0){
         pmid2=0
     }
-    
-    # papers based on PMIDs
-    # dami_papers <- fetch_pubmed_data(dami_on_pubmed)
-    # titles <- unlist(xpathApply(dami_papers, "//ArticleTitle", saveXML))
-    # title_pos <- regexpr("<ArticleTitle>.*<\\/ArticleTitle>", titles)
-    # titles <- substr(titles, title_pos + 14, title_pos + attributes(title_pos)$match.length - 16)
-    # dami_abstracts_xml <- fetch_pubmed_data(dami_on_pubmed)
-    # dami_abstracts_list <- articles_to_list(dami_abstracts_xml)
-    
+        
     vdg[i,1] <- gname
     vdg[i,2] <- pmid
     vdg[i,3] <- pmid2
 }
 
-write.csv(vdg,"valid_gene_GSE1456.csv")
+write.csv(vdg,"valid_gene.csv")
 summary(vdg[,2]!=0)
 summary(vdg[,3]!=0)
